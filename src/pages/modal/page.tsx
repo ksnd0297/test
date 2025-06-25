@@ -1,7 +1,15 @@
-import { useState, useRef, useEffect, useLayoutEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import DaumPostcodeEmbed from "react-daum-postcode";
 import { BottomSheet } from "react-spring-bottom-sheet";
 import "react-spring-bottom-sheet/dist/style.css";
+
+// Extend the Window interface to include kakao
+declare global {
+  interface Window {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    kakao: any;
+  }
+}
 
 export default function ModalPage() {
   const [open, setOpen] = useState(false);
@@ -16,7 +24,7 @@ export default function ModalPage() {
           level: 3,
         };
 
-        const map = new window.kakao.maps.Map(container, options);
+        new window.kakao.maps.Map(container, options);
       });
     }
   });

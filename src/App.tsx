@@ -1,7 +1,6 @@
 import { motion } from "motion/react";
 import { MOTION_VARIANTS } from "./constants";
 import { Link } from "react-router";
-import { useEffect } from "react";
 
 function App() {
   return (
@@ -12,6 +11,7 @@ function App() {
           <Link to="/home">Go to Home</Link>
           <Link to="/upload">Go to Upload</Link>
           <Link to="/modal">Go to Modal</Link>
+          <Link to="/guest">Go to Guest</Link>
         </div>
       </div>
     </motion.div>

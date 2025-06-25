@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useState, type ReactElement } from "react";
+import { useLayoutEffect, useState, type ReactElement } from "react";
 
 const Script = ({ children }: { children: ReactElement }) => {
   const [onLoad, setOnLoad] = useState(false);

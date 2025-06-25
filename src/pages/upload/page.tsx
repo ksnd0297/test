@@ -29,7 +29,7 @@ const UploadPage: React.FC = () => {
       const base64 = await fileToBase64(file);
       setPreview(base64);
 
-      const res = await fetch("http://localhost:4000/upload", {
+      const res = await fetch("http://192.168.219.103:4000/upload", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ image: base64 }),

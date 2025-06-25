@@ -7,6 +7,7 @@ import { AnimatePresence } from "motion/react";
 import UploadPage from "./pages/upload/page";
 import ModalPage from "./pages/modal/page";
 import Script from "./Script";
+import GuestPage from "./pages/guest/page";
 
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
@@ -23,6 +24,7 @@ createRoot(document.getElementById("root")!).render(
             </Script>
           }
         />
+        <Route path="/guest" element={<GuestPage />} />
       </Routes>
     </AnimatePresence>
   </BrowserRouter>

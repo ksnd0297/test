@@ -9,7 +9,7 @@ const PORT = 4000;
 
 // 미들웨어 설정
 app.use(cors());
-app.use(express.json({ limit: "10mb" })); // Base64 데이터 처리
+app.use(express.json({ limit: "100mb" })); // Base64 데이터 처리
 
 // 업로드 경로 생성
 const uploadDir = path.join(__dirname, "uploads");
